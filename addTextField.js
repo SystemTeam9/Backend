@@ -6,7 +6,7 @@ const classButton = document.getElementsByClassName("exButton");        // ボ�
 const addButtonHandle = () => {
     if(textFieldNum == 15) {
         alert("これ以上増やせません");
-        exit;
+        return;
     }
     const newTextField = container.lastElementChild.cloneNode(true);        // 最後の子要素を複製
     container.appendChild(newTextField);        // 複製した要素の追加
@@ -18,7 +18,7 @@ const addButtonHandle = () => {
 const deleteButtonHandle = (buttonElements) => {
     if(textFieldNum == 1) {
         alert("これ以上削除できません");
-        exit;
+        return;
     }
     container.removeChild(container.children[buttonElements.id]);       // 押されたボタンのidを配列番号として要素を削除
     createId();
