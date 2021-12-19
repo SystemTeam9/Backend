@@ -1,4 +1,5 @@
-let textareaNum = 1;
+let textFieldNum = 1;
+const container = document.getElementById("putTextField");
 const classButton = document.getElementsByClassName("exButton");
 
 const addButtonHandle = () => {
@@ -6,12 +7,9 @@ const addButtonHandle = () => {
         alert("これ以上増やせません");
         exit;
     }
-    const elements = document.getElementById("inputText");
-    const copied = elements.lastElementChild.cloneNode(true);
-    elements.appendChild(copied);
-    for(let i=0; i < classButton.length; i++) {
-        classButton[i].setAttribute("id", i);
-    }
+    const newTextField = container.lastElementChild.cloneNode(true);
+    container.appendChild(newTextField);
+    recreateId();
     textareaNum++;
 }
 
@@ -20,10 +18,13 @@ const deleteButtonHandle = (buttonElements) => {
         alert("これ以上削除できません");
         exit;
     }
-    const elements = document.getElementById("inputText");
-    elements.removeChild(elements.children[buttonElements.id]); //ここの指定をどうするかが課題
+    container.removeChild(container.children[buttonElements.id]);
+    recreateId();
+    textareaNum--;
+}
+
+const recreateId = () => {
     for(let i=0; i < classButton.length; i++) {
         classButton[i].setAttribute("id", i);
     }
-    textareaNum--;
 }
