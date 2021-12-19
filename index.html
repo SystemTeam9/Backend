@@ -6,12 +6,12 @@
     </head>
     <body>
         <div id="inputText">
-            <div class="container">
+            <div>
                 <input type="textarea" style="width: 60vw;">
-                <button onclick="deleteButtonHandle()"><img src="image/trashcan.svg" style="width: 3vw; height: 3vw;" /></button>
+                <button onclick="deleteButtonHandle(this)" class="exButton"><img src="image/trashcan.svg" style="width: 3vw; height: 3vw;" /></button>
             </div>
         </div>
-        <button onClick="addButtonHandle()">欄を増やすよ</button>
+        <button onClick="addButtonHandle(this)">欄を増やすよ</button>
         <script src="sample.js"></script>
     </body>
 </html>
