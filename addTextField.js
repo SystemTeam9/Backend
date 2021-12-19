@@ -1,6 +1,5 @@
 let textFieldNum = 1;       // 現在の翻訳欄の数
 const container = document.getElementById("putTextField");      // 翻訳欄の親要素
-const classButton = document.getElementsByClassName("exButton");        // ボタンにidを後から付与するための要素
 
 // 翻訳欄の追加
 const addButtonHandle = () => {
@@ -27,6 +26,7 @@ const deleteButtonHandle = (buttonElements) => {
 
 // 各ボタンにidを設定
 const createId = () => {
+    const classButton = document.getElementsByClassName("exButton");        // ボタンにidを後から付与するための要素
     for(let i=0; i < classButton.length; i++) {
         classButton[i].setAttribute("id", i);
     }
