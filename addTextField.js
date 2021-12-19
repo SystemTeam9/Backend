@@ -4,25 +4,25 @@ const classButton = document.getElementsByClassName("exButton");        // ボ�
 
 // 翻訳欄の追加
 const addButtonHandle = () => {
-    if(textareaNum == 15) {
+    if(textFieldNum == 15) {
         alert("これ以上増やせません");
         exit;
     }
     const newTextField = container.lastElementChild.cloneNode(true);        // 最後の子要素を複製
     container.appendChild(newTextField);        // 複製した要素の追加
     createId();
-    textareaNum++;
+    textFieldNum++;
 }
 
 // 翻訳欄の削除
 const deleteButtonHandle = (buttonElements) => {
-    if(textareaNum == 1) {
+    if(textFieldNum == 1) {
         alert("これ以上削除できません");
         exit;
     }
     container.removeChild(container.children[buttonElements.id]);       // 押されたボタンのidを配列番号として要素を削除
     createId();
-    textareaNum--;
+    textFieldNum--;
 }
 
 // 各ボタンにidを設定
