@@ -10,7 +10,7 @@ const addButtonHandle = () => {
     const newTextField = container.lastElementChild.cloneNode(true);        // 最後の子要素を複製
     container.appendChild(newTextField);        // 複製した要素の追加
     createId();
-    document.getElementById(textFieldNum).value = "";
+    document.getElementById(textFieldNum).value = "";       // 複製後の翻訳欄のテキストを削除
     textFieldNum++;
 }
 
