@@ -10,6 +10,7 @@ const addButtonHandle = () => {
     const newTextField = container.lastElementChild.cloneNode(true);        // 最後の子要素を複製
     container.appendChild(newTextField);        // 複製した要素の追加
     createId();
+    document.getElementById(textFieldNum).value = "";
     textFieldNum++;
 }
 
@@ -27,7 +28,9 @@ const deleteButtonHandle = (buttonElements) => {
 // 各ボタンにidを設定
 const createId = () => {
     const classButton = document.getElementsByClassName("exButton");        // ボタンにidを後から付与するための要素
+    const classTextField = document.getElementsByClassName("exTextField");        // テキストエリアにidを後から付与するための要素
     for(let i=0; i < classButton.length; i++) {
         classButton[i].setAttribute("id", i);
+        classTextField[i].setAttribute("id", i);
     }
 }
