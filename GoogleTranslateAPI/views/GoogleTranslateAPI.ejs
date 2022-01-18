@@ -1,0 +1,28 @@
+<!-- views/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Translate</title>
+    <link rel="stylesheet" href="/css/Home.css">
+</head>
+<body>
+    <h1><%= title %></h1>
+    <div class="book-form">
+        <h2>Add Book Infomation</h2>
+        <form action="/" method="POST" autocomplete="off">
+            <div class="form-control">
+                <label for="text">Before</label>
+                <input type="text" name="beforeTranslate">
+            </div>
+            <div class="form-control">
+                <label for="text">After</label>
+                <article name="afterTranslate">
+                </article>
+            </div>
+            <button class="btn" type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
