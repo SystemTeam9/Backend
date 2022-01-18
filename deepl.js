@@ -30,4 +30,4 @@ const params = {
 }
 request.post(params, function(error, response, result){
     console.log(result.translations[0].text);
-}
+)};
