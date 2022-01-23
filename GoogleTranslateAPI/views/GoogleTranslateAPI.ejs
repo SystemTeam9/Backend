@@ -22,6 +22,12 @@
                 </article>
             </div>
             <button class="btn" type="submit">Submit</button>
+
+            <p>
+                <%#= if(textAfter[Object.keys(textAfter)[1]] != "Bad Request"){ %>
+                    <%= textAfter[Object.keys(textAfter)[1]] %>
+                <%#= } %>
+            </p>
         </form>
     </div>
 </body>
